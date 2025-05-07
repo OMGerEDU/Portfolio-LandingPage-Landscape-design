@@ -348,45 +348,39 @@ export default function Landing() {
         }
       `}</style>
     
-      {/* סקשן הירו */}
-      <section className="relative h-screen flex items-center justify-center">
-        {/* תמונת רקע */}
-        <div 
-          className="absolute inset-0 z-[-2]"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1584479898061-15742e14f50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
-        <div className="overlay"></div>
-        
-        {/* קונטיינר אנימציית עלים */}
-        <div className="leaf-container"></div>
-        
-        <div className="text-slate-950 mx-auto px-4 container z-10">
-          <div className="flex items-center justify-center mb-4">
-            <Leaf className="h-10 w-10 text-white mr-3" />
-            <h1 className="text-4xl font-bold">גן נוף ירושלים</h1>
-          </div>
-          <h2 className="text-5xl font-bold mb-6 leading-tight max-w-3xl mx-auto">
-            תכנון ועיצוב גינות בירושלים – פגישת ייעוץ חינם
-          </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            הפכו את החלום לגינה מושלמת עם צוות המומחים שלנו. 
-            אנו מתמחים בעיצוב, הקמה ותחזוקה של גינות ייחודיות שישנו את המרחב שלכם.
-          </p>
-          <Button 
-            className="cta-button text-lg bg-[#43A047] hover:bg-[#2E7D32] text-white px-8 py-6 rounded-xl text-xl shadow-lg"
-            onClick={() => {
-              document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
-            }}
-          >
-            השאירו פרטים לפגישת ייעוץ
-            <ChevronRight className="h-5 w-5 mr-2" />
-          </Button>
-        </div>
-      </section>
+ {/* סקשן הירו בלבד */}
+<section className="relative h-screen flex items-center justify-center">
+  <div className="absolute inset-0 z-[-2]" style={{
+      backgroundImage: "url('https://images.unsplash.com/photo-1584479898061-15742e14f50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}/>
+  <div className="overlay"></div>
+  <div className="leaf-container"></div>
+  
+  <div className="text-white mx-auto px-4 container z-10 text-center">
+    <Leaf className="h-10 w-10 text-white mb-4 inline-block" />
+    <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+      גן נוף ירושלים
+    </h1>
+    <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-6">
+      תכנון ועיצוב גינות בירושלים – פגישת ייעוץ חינם
+    </h2>
+    <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+      הפכו את החלום לגינה מושלמת עם צוות המומחים שלנו. אנו מתמחים בעיצוב, הקמה ותחזוקה של גינות ייחודיות שישנו את המרחב שלכם.
+    </p>
+    <Button 
+      className="cta-button text-lg bg-[#43A047] hover:bg-[#2E7D32] text-white px-8 py-6 rounded-xl text-xl shadow-lg"
+      onClick={() => {
+        document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+      }}
+    >
+      השאירו פרטים לפגישת ייעוץ
+      <ChevronRight className="h-5 w-5 mr-2" />
+    </Button>
+  </div>
+</section>
+
       
       {/* סקשן שירותים */}
       <section className="py-20 bg-[#E8F5E9]">
